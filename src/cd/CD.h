@@ -1,10 +1,14 @@
+#ifndef CD_H_
+#define CD_H_
+
 #include <string>
+#include <vector>
 
 class CD
 {
 private:
-    std::string title;/* data */
-    int ISBN;
+    std::string title;
+    int64_t ISBN;
     float price;
     std::string artist;//应该使用字符数组以存储cd中多名艺术家
     std::string manufacture;//厂牌
@@ -15,12 +19,8 @@ private:
 public:
     CD(/* args */);
     ~CD();
+    void CD_Search();
+    void Set_CD(int64_t d1, float f, std::string s1, std::string s2, std::string s3, int d2, std::string s4);
 };
 
-CD::CD(/* args */)
-{
-}
-
-CD::~CD()
-{
-}
+#endif
